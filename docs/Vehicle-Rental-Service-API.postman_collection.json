@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "b051d8e1-2bb6-4f33-ba17-fba543c68aae",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4299349"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user1@domain.com\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin1@domain.com\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Branch",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjZjBjMDdhLTcwMDAtNDkyZi1hZTU5LTJmZmIyYTk2MDUzOCIsImVtYWlsIjoiYWRtaW4xQGRvbWFpbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTUzMTY0MDcsImV4cCI6MTY5NTQwMjgwN30.iGH1vjJh_74UH3Dgx6et88VbYcjmgtssSs0kAGTNyBQ",
+						"type": "default"
+					}
+				],
+				"url": "http://localhost:8080/v1/branches/7f10741d-b487-477e-ab2d-d59fb713f9e6"
+			},
+			"response": []
+		},
+		{
+			"name": "Add branch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjZjBjMDdhLTcwMDAtNDkyZi1hZTU5LTJmZmIyYTk2MDUzOCIsImVtYWlsIjoiYWRtaW4xQGRvbWFpbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTUzMTY0MDcsImV4cCI6MTY5NTQwMjgwN30.iGH1vjJh_74UH3Dgx6et88VbYcjmgtssSs0kAGTNyBQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"A1 Car Rentals\",\r\n    \"address\":\"Srinagar\",\r\n    \"lat\":12.000,\r\n    \"long\":556.223\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/branches"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle Type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluMUBkb21haW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk1MzEzMDM2LCJleHAiOjE2OTUzOTk0MzZ9.soj-NdKsi7L328ns2LgLbg1kpXYhNmsV3I5Xlu6vtbE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"type\":\"carz\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/vehicles/type"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluMUBkb21haW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk1MzEzMDM2LCJleHAiOjE2OTUzOTk0MzZ9.soj-NdKsi7L328ns2LgLbg1kpXYhNmsV3I5Xlu6vtbE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/vehicles"
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluMUBkb21haW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk1MzEzMDM2LCJleHAiOjE2OTUzOTk0MzZ9.soj-NdKsi7L328ns2LgLbg1kpXYhNmsV3I5Xlu6vtbE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/vehicles"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles Types",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluMUBkb21haW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk1MzEzMDM2LCJleHAiOjE2OTUzOTk0MzZ9.soj-NdKsi7L328ns2LgLbg1kpXYhNmsV3I5Xlu6vtbE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/vehicles/type"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImFkbWluMUBkb21haW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjk1MzEzMDM2LCJleHAiOjE2OTUzOTk0MzZ9.soj-NdKsi7L328ns2LgLbg1kpXYhNmsV3I5Xlu6vtbE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"BMW 3\",\r\n    \"capacity\": 4,\r\n    \"color\": \"White\",\r\n    \"model\": \"Sports\",\r\n    \"price_per_hour\": 900,\r\n    \"branch_id\": \"7f10741d-b487-477e-ab2d-d59fb713f9e6\",\r\n    \"vehicleType_id\": \"d7b64eeb-d1d5-46a7-8cbe-fd65747599eb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/vehicles"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjZjBjMDdhLTcwMDAtNDkyZi1hZTU5LTJmZmIyYTk2MDUzOCIsImVtYWlsIjoiYWRtaW4xQGRvbWFpbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTUzMTY0MDcsImV4cCI6MTY5NTQwMjgwN30.iGH1vjJh_74UH3Dgx6et88VbYcjmgtssSs0kAGTNyBQ",
+						"type": "default"
+					}
+				],
+				"url": "http://localhost:8080/v1/branches/vehicle/4b16e17b-fa00-4a4c-b8d3-4e8e180f2662"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUzMDVmZmI5LWM0ZTctNGFjZS05N2U5LTlhODdjZDI3YWNkMiIsImVtYWlsIjoidXNlcjFAZG9tYWluLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk1MzU2ODI2LCJleHAiOjE2OTU0NDMyMjZ9.HUoDS1sHOrWw19-wifNo59Bi66TQUoSpe_ZSsB2ILP4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state_timestamp\" : 1695533400000,\r\n    \"end_timestamp\" : 1695537000000,\r\n    \"vehicle_id\" : \"4b16e17b-fa00-4a4c-b8d3-4e8e180f2662\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/booking"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Booking",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUzMDVmZmI5LWM0ZTctNGFjZS05N2U5LTlhODdjZDI3YWNkMiIsImVtYWlsIjoidXNlcjFAZG9tYWluLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk1Mzc1MTU1LCJleHAiOjE2OTU0NjE1NTV9.roI7QrxjGtfCi_-LE61d7hUJs8-8Wbu6saM5ivqPuIY",
+						"type": "default"
+					}
+				],
+				"url": "http://localhost:8080/v1/booking/9ddd9a7e-baae-4e55-b32b-c267d9ce5de0"
+			},
+			"response": []
+		}
+	]
+}
